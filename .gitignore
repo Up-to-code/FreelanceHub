@@ -3,3 +3,4 @@ components
 .env
 node_modules
 .env*
+.next
