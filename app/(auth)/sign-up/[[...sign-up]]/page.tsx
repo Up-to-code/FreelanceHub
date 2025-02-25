@@ -95,9 +95,9 @@ const SignUp = () => {
     try {
       // Using correct Clerk parameter names: first_name, last_name
       await signUp.create({
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        emailAddress: formData.emailAddress,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email_address: formData.emailAddress,
         password: formData.password
       });
 
