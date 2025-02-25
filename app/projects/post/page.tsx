@@ -1,11 +1,10 @@
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import {  FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
@@ -21,15 +20,7 @@ const formSchema = z.object({
 })
 
 export default function PostProject() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: "",
-      description: "",
-      budget: "",
-      deadline: "",
-    },
-  })
+  const form = useForm<z.infer<typeof formSchema>>();
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Here you would typically send the data to your backend
@@ -39,7 +30,7 @@ export default function PostProject() {
   return (
     <div className="container mx-auto max-w-2xl px-4 py-8">
       <h1 className="mb-8 text-3xl font-bold">Post a New Project</h1>
-      <Form {...form}>
+  
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
@@ -103,7 +94,7 @@ export default function PostProject() {
             Post Project
           </Button>
         </form>
-      </Form>
+   
     </div>
   )
 }
