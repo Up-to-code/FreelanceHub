@@ -94,3 +94,7 @@ FreelanceHub is more than just a marketplace; it's a community where talent meet
 ## 🎉 Join FreelanceHub Today!
 
 Be part of the future of work and start your freelancing journey with FreelanceHub!
+
+## Project links
+
+[Source](https://github.com/Up-to-code/FreelanceHub) · [Issues](https://github.com/Up-to-code/FreelanceHub/issues) · [Public project directory](https://github.com/qentrah/.github/blob/main/profile/PROJECTS.md)
